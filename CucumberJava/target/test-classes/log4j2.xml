@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+    <Properties>
+        <Property name="basePath">target/Logs</Property>
+    </Properties>
+    <Appenders>
+        <!-- File Appender -->
+        <File name="FILE" fileName="${basePath}/CucumberBDD_log4j2.${date:yyyy-MM-dd_hh-mm-ss}.log" append="true">
+            <PatternLayout
+                pattern="[%-5p][%d{dd-MMM-yyyy HH:mm:ss a}] %C{0}.%M:(%L) - %m%n" />
+        </File>
+
+        <!-- Console Appender -->
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout
+                pattern="[%-5p][%d{dd-MMM-yyyy HH:mm:ss a}] %C{0}.%M:(%L) - %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="log" level="all" />
+        <Root level="all">
+            <AppenderRef ref="FILE" level="all" />
+            <AppenderRef ref="STDOUT" level="all" />
+        </Root>
+    </Loggers>
+</Configuration>

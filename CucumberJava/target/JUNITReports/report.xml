@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="67.572">
+<testcase classname="This feature verifies addto cart, remove, placing Order" name="checks remove item from cart" time="18.218">
+<system-out><![CDATA[Given user is in login page.................................................passed
+Then views login and password and login button..............................passed
+Then enters username and Password and clicks on login button................passed
+And user lands to Home page and views Empty cart............................passed
+And adds item to cart.......................................................passed
+Then checks the count of the cart...........................................passed
+When user is in landing page................................................passed
+And clicks the cart and removes item from the cart and makes its empty......passed
+]]></system-out>
+</testcase>
+<testcase classname="This feature verifies addto cart, remove, placing Order" name="verifies submitting shopping request" time="15.316">
+<system-out><![CDATA[Given user is in login page.................................................passed
+Then views login and password and login button..............................passed
+Then enters username and Password and clicks on login button................passed
+And user lands to Home page and views Empty cart............................passed
+And adds item to cart.......................................................passed
+Then checks the count of the cart...........................................passed
+When user is in home page navigates to cart page............................passed
+Then clicks checkout........................................................passed
+Then enters details in your Information page and clicks continue............passed
+And navigates to Checkout Overview page and clicks finish...................passed
+And completes the checkout..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifies Login to Sauce_demo" name="Login to saucedemo admin page" time="14.194">
+<system-out><![CDATA[Given User opens the web page URL...........................................passed
+Then User views login form with username and password.......................passed
+When User enters "standard_user" and "secret_sauce" in username and password field.passed
+Then verifies the cart icon in homepage.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifies Login to Sauce_demo" name="Login to saucedemo admin page 2" time="19.589">
+<system-out><![CDATA[Given User opens the web page URL...........................................passed
+Then User views login form with username and password.......................passed
+When User enters "performance_glitch_user" and "secret_sauce" in username and password field.passed
+Then verifies the cart icon in homepage.....................................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -1,0 +1,159 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>CucumberJava</groupId>
+	<artifactId>CucumberJava</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>TestAutomation</name>
+	<description>This project utilizes the BDD format of test framework design</description>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<cucumberjava.version>7.4.1</cucumberjava.version>
+		<cucumberjunit.version>7.4.1</cucumberjunit.version>
+		<junit.version>4.13.2</junit.version>
+		<java.version>1.8</java.version>
+		<seleniumjava.version>4.3.0</seleniumjava.version>
+		<log4j2.version>2.18.0</log4j2.version>
+		<maven.compiler.version>3.8.1</maven.compiler.version>
+		<maven-cucumber-reporting.version>5.7.1</maven-cucumber-reporting.version>
+		<maven.surefire.version>3.0.0-M7</maven.surefire.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>${maven.surefire.version}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumberjunit.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumberjava.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${seleniumjava.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.2.1</version>
+		</dependency>
+		<!-- dependency for log4j2-->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.18.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.18.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.0.9</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/tech.grasshopper/extent-pdf-report -->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>1.7.0</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven.surefire.version}</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+				</configuration>
+			</plugin>
+	<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>${maven.compiler.version}</version>
+<configuration>
+<encoding>UTF-8</encoding>
+<source>${java.version}</source>
+<target>${java.version}</target>
+</configuration>
+		</plugin>
+
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>${maven-cucumber-reporting.version}</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>CucumberJava</projectName>
+							<!-- optional, per documentation set this to "true" to bypass generation of Cucumber Reports entirely, defaults to false if not specified -->
+							<skip>false</skip>
+							<!-- output directory for the generated report -->
+							<outputDirectory>${project.build.directory}</outputDirectory>
+							<!-- optional, defaults to outputDirectory if not specified -->
+							<inputDirectory>${project.build.directory}/JSONResports</inputDirectory>
+							<jsonFiles>
+								<!-- supports wildcard or name pattern -->
+								<param>**/*.json</param>
+							</jsonFiles>
+							<!-- optional, defaults to outputDirectory if not specified -->
+							<classificationDirectory>${project.build.directory}/classifications</classificationDirectory>
+							<classificationFiles>
+								<!-- supports wildcard or name pattern -->
+								<param>sample.properties</param>
+								<param>other.properties</param>
+							</classificationFiles>
+							<parallelTesting>false</parallelTesting>
+							<!-- optional, set true to group features by its Ids -->
+							<mergeFeaturesById>false</mergeFeaturesById>
+							<!-- optional, set true to get a final report with latest results of the same test from different test runs -->
+							<mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
+							<!-- optional, set true to fail build on test failures -->
+							<checkBuildResult>false</checkBuildResult>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
