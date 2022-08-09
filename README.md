@@ -41,7 +41,7 @@ Its a one stop solution if you are looking out for a readymade solution for Beha
 
 ## Setup
 Create a maven project in your IDE and import the project 
-The POM.xml has all necessary lib name and customisable jars to run the project 
+The POM.xml has all necessary jars and have customisable versions to run the project 
 
 
 
