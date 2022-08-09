@@ -36,7 +36,7 @@ Its a one stop solution if you are looking out for a readymade solution for Beha
 - Taking screenshots of failed steps
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](./BDDSample)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Setup
