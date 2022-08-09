@@ -2,21 +2,6 @@
 
 # Project Name
 > This project is BDD Cucumber based test automation framework
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
-
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
-
 
 ## General Information
 - What problem does it (intend to) solve?
@@ -25,7 +10,6 @@
 
 This framework applies the page Object Model to automation the WEB UI.
 Its a one stop solution if you are looking out for a readymade solution for Behaviorial driven Cucumber Maven based framework.
-
 
 ## Technologies Used
 -Maven
@@ -36,7 +20,6 @@ Its a one stop solution if you are looking out for a readymade solution for Beha
 -Log4j2
 -Extent Reports
 -Cucumber HTML,PDF,Junit Reports
-
 
 ## Features
 - List the ready features here:
@@ -52,11 +35,9 @@ Its a one stop solution if you are looking out for a readymade solution for Beha
 - Capturing failed steps in Reports
 - Taking screenshots of failed steps
 
-
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
-
 
 ## Setup
 Create a maven project in your IDE and import the project 
