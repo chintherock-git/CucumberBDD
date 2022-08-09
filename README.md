@@ -64,8 +64,8 @@ To do:
 Give credit here.
 
 - Many thanks to...
-This project makes use of Saucelabs Demo Page
-Credit :A demo env provided by Saucelabs to mirror the user experience of a ecommerce website.
+- This project makes use of Saucelabs Demo Page
+- Credit :A demo env provided by Saucelabs to mirror the user experience of a ecommerce website.
 
 
 ## Contact
